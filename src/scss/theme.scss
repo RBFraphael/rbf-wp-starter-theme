@@ -1,0 +1,15 @@
+/**
+ * Write your SASS here. You can wrap anything you want in
+ * other files, and import them here, like variables, libs
+ * (aka. Bootstrap), component-specific styles, etc.
+ */
+
+@import "bootstrap-5.1.0/bootstrap.scss";
+@import "addons/index.scss";
+
+@import "breadcrumbs";
+@import "global";
+@import "header";
+@import "loader";
+@import "menus";
+@import "misc";

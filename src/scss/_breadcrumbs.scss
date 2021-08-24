@@ -1,0 +1,24 @@
+header div.breadcrumbs{
+    border-top: solid 1px #ededed;
+    background-color: #F9F9F9;
+    color: #ababab;
+
+    span{
+        font-weight: 200;
+        font-size: 16px;
+
+        &.current-item{
+            color: #2D2D2D;
+        }
+
+        a{
+            color: #ababab;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover{
+                color: #888;
+            }
+        }
+    }
+}

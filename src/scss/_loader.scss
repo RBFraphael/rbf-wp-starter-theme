@@ -1,0 +1,30 @@
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #FFF;
+
+    #wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 50% 50%;
+        transform: translate(-50%, -50%);
+        animation: 1s intro forwards;
+    }
+}
+
+@keyframes intro{
+    0%{
+        transform: scale(1.5) translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}

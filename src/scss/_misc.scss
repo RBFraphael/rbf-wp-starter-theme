@@ -1,0 +1,27 @@
+button.transparent{
+    background:none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.bg-image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wide{
+    padding-bottom: 56.25%;
+}
+
+.ultra-wide{
+    padding-bottom: 42.85%;
+}
+
+.four-three{
+    padding-bottom: 75%;
+}
+
+.square{
+    padding-bottom: 100%;
+}
