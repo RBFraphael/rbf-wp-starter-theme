@@ -1,3 +1,7 @@
+import { FooterWrap } from "./footer-wrap";
+import { Loader } from "./loader";
+import { MobileDrawer } from "./mobile-drawer";
+
 export class Features {
 
     constructor()
@@ -9,6 +13,10 @@ export class Features {
          * separate each feature in another JS file, export
          * it's class and instantiate here.
          */
+
+        new FooterWrap();
+        new MobileDrawer();
+        new Loader();
     }
 
 }

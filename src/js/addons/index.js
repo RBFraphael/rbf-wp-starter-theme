@@ -10,7 +10,21 @@ export class AddOns
          * and will be meged into compiled release.js file.
          */
 
-        window.lazyload = new LazyLoad();
-        AOS.init();
+        this.initLazyload();
+
+        jQuery("header").sticky({
+            topSpacing: 0,
+            zIndex: 99,
+        });
+    }
+
+    initLazyload()
+    {
+        if(typeof(window.lazyload) == "undefined"){
+            window.lazyload = new LazyLoad();
+        }
+    
+        window.lazyload.update();
+        setTimeout(this.initLazyload, 1000);
     }
 }

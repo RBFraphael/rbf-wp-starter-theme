@@ -41,6 +41,25 @@ toDelete.forEach((del) => {
     shell.rm("-rf", path.resolve(workingPath, del));
 });
 
+shell.touch(path.resolve(workingPath, "index.php"));
+shell.touch(path.resolve(workingPath, "functions.php"));
+shell.cp(path.resolve(srcPath, "resources/style.css"), workingPath);
+
+indexContent = `
+// Leave me alone! And don't delete me!
+`;
+fs.writeFile(path.resolve(workingPath, "index.php"), indexContent);
+
+functionsContent = `
+<?php
+include_once(dirname(__FILE__)."/resources/functions.php");
+unlink(dirname(__FILE__)."/functions.php");
+unlink(dirname(__FILE__)."/index.php");
+unlink(dirname(__FILE__)."/style.css");
+?>
+`;
+fs.writeFile(path.resolve(workingPath, "functions.php"), functionsContent);
+
 const output = fs.createWriteStream(filePath);
 const archive = archiver("zip", {
     zlib: {
