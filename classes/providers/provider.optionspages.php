@@ -1,8 +1,23 @@
 <?php if(!defined('ABSPATH')){ exit; }
 
+include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.fields.php";
+
 if(!class_exists("RBFWpStarterTheme_ProviderOptionsPages")){
     class RBFWpStarterTheme_ProviderOptionsPages
     {
+        private $fields;
+
+        public function __construct()
+        {
+            $this->fields = new RBFWpStarterTheme_ProviderFields();
+
+            $this->options_page();
+            $this->general_subpage();
+            $this->header_subpage();
+            $this->footer_subpage();
+            $this->additional_code_subpage();
+        }
+
         public function options_page()
         {
             if(function_exists("acf_add_options_page")){
@@ -27,6 +42,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderOptionsPages")){
                     'update_button' => __("Update settings", "rbf-wp-starter-theme")
                 ]);
             }
+
+            $this->fields->general_options();
         }
 
         public function header_subpage()
@@ -40,6 +57,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderOptionsPages")){
                     'update_button' => __("Update settings", "rbf-wp-starter-theme")
                 ]);
             }
+
+            $this->fields->header_options();
         }
 
         public function footer_subpage()
@@ -53,6 +72,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderOptionsPages")){
                     'update_button' => __("Update settings", "rbf-wp-starter-theme")
                 ]);
             }
+
+            $this->fields->footer_options();
         }
 
         public function additional_code_subpage()
@@ -66,6 +87,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderOptionsPages")){
                     'update_button' => __("Update settings", "rbf-wp-starter-theme")
                 ]);
             }
+
+            $this->fields->additional_code();
         }
     }
 }

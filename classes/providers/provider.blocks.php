@@ -1,15 +1,20 @@
 <?php if(!defined('ABSPATH')){ exit; }
 
 include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.blocksrenderer.php";
+include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.fields.php";
 
 if(!class_exists("RBFWpStarterTheme_ProviderBlocks")){
     class RBFWpStarterTheme_ProviderBlocks
     {
         private $renderers;
+        private $fields;
 
         public function __construct()
         {
             $this->renderers = new RBFWpStarterTheme_ProviderBlocksRenderer();
+            $this->fields = new RBFWpStarterTheme_ProviderFields();
+
+            $this->container();
         }
 
         public function container()
@@ -31,6 +36,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderBlocks")){
                     wp_enqueue_style("theme-main");
                 }
             ]);
+            
+            $this->fields->block_container();
         }
 
         public function register_block($arguments)

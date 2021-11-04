@@ -1,5 +1,5 @@
 # RBF Wordpress Starter Theme
- Simple, easy-to-use (and easy-to-understand) modern Wordpress starter theme, for speed up theme development
+An easy to use and easy to understand Wordpress starter theme
 
 ## Getting started
 

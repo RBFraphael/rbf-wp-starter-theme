@@ -67,7 +67,7 @@ inquirer.prompt([
 ]).then((answers) => {
     const replaceSummary = {
         'RBF Wordpress Starter Theme': answers.project_name,
-        'Simple, easy-to-use (and easy-to-understand) modern Wordpress starter theme, for speed up theme development': answers.project_description,
+        'An easy to use and easy to understand Wordpress starter theme': answers.project_description,
         'RBFWpStarterTheme': answers.class_prefix,
         'RBFWPSTARTERTHEME': answers.const_prefix,
         'rbf-wp-starter-theme': answers.text_domain,
@@ -119,7 +119,7 @@ inquirer.prompt([
         ];
         
         const matchFiles = [
-            path.resolve(path.dirname(__dirname), "resources/style.css"),
+            path.resolve(path.dirname(__dirname), "style.css"),
             path.resolve(path.dirname(__dirname), "**/*.php"),
             path.resolve(path.dirname(__dirname), "**/*.md"),
             path.resolve(path.dirname(__dirname), "**/*.txt"),

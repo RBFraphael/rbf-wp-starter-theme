@@ -36,6 +36,7 @@ if(!class_exists("RBFWpStarterTheme_Main")){
             add_action("init", [$actions, "register_cpts"]);
             add_action("init", [$actions, "register_css"]);
             add_action("init", [$actions, "register_js"]);
+            add_action("rest_api_init", [$actions, "register_rest_api"]);
             add_action("wp_enqueue_scripts", [$actions, "enqueue_css"]);
             add_action("wp_enqueue_scripts", [$actions, "enqueue_js"]);
             add_action("wp_head", [$actions, "wp_head"]);

@@ -68,13 +68,13 @@ if(!class_exists("RBFWpStarterTheme_ProviderFields")){
             $this->add_field_group($fields);
         }
 
-        public function cpt_mycpt()
+        public function cpt_example_cpt()
         {
-            $fields = new FieldsBuilder("cpt-my-cpt", ['style' => "seamless", 'title' => __("My CPT Fields", "rbf-wp-starter-theme")]);
+            $fields = new FieldsBuilder("cpt-my-cpt", ['style' => "seamless", 'title' => __("Example post type fields", "rbf-wp-starter-theme")]);
             $fields
                 ->addText("text-field", ['label' => __("Short Text Field", "rbf-wp-starter-theme")])
                 ->addTextarea("textarea", ['label' => __("Long Text Field", "rbf-wp-starter-theme")])
-                ->setLocation("post_type", "==", "my_cpt");
+                ->setLocation("post_type", "==", "example_cpt");
             
             $this->add_field_group($fields);
         }

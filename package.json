@@ -1,7 +1,7 @@
 {
   "name": "rbf-wp-starter-theme",
   "version": "1.0.0",
-  "description": "Simple, easy-to-use (and easy-to-understand) modern Wordpress starter theme, for speed up theme development",
+  "description": "An easy to use and easy to understand Wordpress starter theme",
   "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.15.0",

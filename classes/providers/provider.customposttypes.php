@@ -1,12 +1,23 @@
 <?php if(!defined('ABSPATH')){ exit; }
 
+include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.fields.php";
+
 if(!class_exists("RBFWpStarterTheme_ProviderCustomPostTypes")){
     class RBFWpStarterTheme_ProviderCustomPostTypes
     {
-        public function my_cpt()
+        private $fields;
+
+        public function __construct()
         {
-            register_post_type("my_cpt", [
-                'label' => __("My Custom Post Type", "rbf-wp-starter-theme"),
+            $this->fields = new RBFWpStarterTheme_ProviderFields();
+
+            $this->example_cpt();
+        }
+
+        public function example_cpt()
+        {
+            register_post_type("example_cpt", [
+                'label' => __("Example", "rbf-wp-starter-theme"),
                 'public' => true,
                 'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
                 'exclude_from_search' => false,
@@ -14,6 +25,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderCustomPostTypes")){
                 'rest_base' => 'product',
                 'menu_icon' => "dashicons-screenoptions"
             ]);
+            
+            $this->fields->cpt_example_cpt();
         }
     }
 }

@@ -135,43 +135,30 @@ if(!class_exists("RBFWpStarterTheme_Actions")){
         {
             include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.customposttypes.php";
             $cpts = new RBFWpStarterTheme_ProviderCustomPostTypes();
+        }
 
-            $cpts->my_cpt();
+        public function register_rest_api()
+        {
+            include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.restapi.php";
+            $restapi = new RBFWpStarterTheme_ProviderRestApi();
         }
 
         public function options_pages()
         {
             include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.optionspages.php";
             $options_pages = new RBFWpStarterTheme_ProviderOptionsPages();
-
-            $options_pages->options_page();
-            $options_pages->general_subpage();
-            $options_pages->header_subpage();
-            $options_pages->footer_subpage();
-            $options_pages->additional_code_subpage();
         }
 
         public function custom_fields()
         {
             include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.fields.php";
             $fields = new RBFWpStarterTheme_ProviderFields();
-
-            $fields->general_options();
-            $fields->header_options();
-            $fields->footer_options();
-            $fields->additional_code();
-
-            $fields->cpt_mycpt();
-
-            $fields->block_container();
         }
 
         public function theme_blocks()
         {
             include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.blocks.php";
             $blocks = new RBFWpStarterTheme_ProviderBlocks();
-
-            $blocks->container();
         }
 
         public function acf_favicon($post_id)

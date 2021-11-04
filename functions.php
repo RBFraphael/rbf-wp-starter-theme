@@ -1,7 +1,7 @@
 <?php if(!defined('ABSPATH')){ exit; }
 
-$theme_dir = get_template_directory()."/..";
-$theme_url = get_template_directory_uri()."/..";
+$theme_dir = get_template_directory();
+$theme_url = get_template_directory_uri();
 
 defined("RBFWPSTARTERTHEME_PATH") or define("RBFWPSTARTERTHEME_PATH", $theme_dir);
 defined("RBFWPSTARTERTHEME_URL") or define("RBFWPSTARTERTHEME_URL", $theme_url);
