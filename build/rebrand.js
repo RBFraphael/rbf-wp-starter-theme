@@ -125,6 +125,8 @@ inquirer.prompt([
             path.resolve(path.dirname(__dirname), "**/*.txt"),
             path.resolve(path.dirname(__dirname), "**/*.json"),
             path.resolve(path.dirname(__dirname), "**/*.xml"),
+            path.resolve(path.dirname(__dirname), "src/**/*.scss"),
+            path.resolve(path.dirname(__dirname), "src/**/*.js"),
             path.resolve(path.dirname(__dirname), "lang/*.pot"),
         ];
 

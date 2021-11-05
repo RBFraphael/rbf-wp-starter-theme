@@ -1,7 +1,7 @@
 <?php if(!defined('ABSPATH')){ exit; } ?>
 <?php get_header(); ?>
 
-<main class="container-fluid py-5">
+<div class="container-fluid py-5">
     <div class="row mb-4">
         <div class="col-12">
             <h4><?= __("Search results for", "rbf-wp-starter-theme"); ?>: "<?= get_search_query(); ?>"</h4>

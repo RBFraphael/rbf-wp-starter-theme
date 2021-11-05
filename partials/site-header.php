@@ -3,13 +3,26 @@
     <div class="container-fluid py-3">
         <div class="row px-2 px-lg-5 align-items-center">
             <div class="col-4 col-lg-1">
-                <a href="<?= get_bloginfo("url"); ?>">
-                    <?php if($header_logo = get_field("header-logo", "options")): ?>
-                    <img data-src="<?= $header_logo; ?>" alt="<?= get_bloginfo("name"); ?>" class="img-fluid lazy" id="header-logo">
-                    <?php else: ?>
-                    <h1 class="fw-bold"><?= get_bloginfo("name"); ?></h1>
-                    <?php endif; ?>
-                </a>
+                <div class="d-none d-lg-block">
+                    <a href="<?= get_bloginfo("url"); ?>">
+                        <?php if($header_logo = get_field("header-logo", "options")): ?>
+                        <img data-src="<?= $header_logo; ?>" alt="<?= get_bloginfo("name"); ?>" class="img-fluid lazy" id="header-logo">
+                        <?php else: ?>
+                        <h1 class="fw-bold"><?= get_bloginfo("name"); ?></h1>
+                        <?php endif; ?>
+                    </a>
+                </div>
+                <div class="d-block d-lg-none">
+                    <a href="<?= get_bloginfo("url"); ?>">
+                        <?php if($mobile_logo = get_field("mobile-header-logo", "options")): ?>
+                        <img data-src="<?= $mobile_logo; ?>" alt="<?= get_bloginfo("name"); ?>" class="img-fluid lazy" id="header-logo">
+                        <?php elseif ($header_logo = get_field("header-logo", "options")): ?>
+                        <img data-src="<?= $header_logo; ?>" alt="<?= get_bloginfo("name"); ?>" class="img-fluid lazy" id="header-logo">
+                        <?php else: ?>
+                        <h1 class="fw-bold"><?= get_bloginfo("name"); ?></h1>
+                        <?php endif; ?>
+                    </a>
+                </div>
             </div>
             <div class="col-8 col-lg-10 text-end text-lg-start">
                 <div class="d-none d-lg-block">

@@ -1,7 +1,7 @@
 <?php if(!defined('ABSPATH')){ exit; } ?>
 <?php get_header(); ?>
 
-<main class="container-fluid">
+<div class="container-fluid">
     <div class="container py-5">
         <div class="row mb-5">
             <div class="col-12">
@@ -32,6 +32,6 @@
         </div>
         <?php endif; ?>
     </div>
-</main>
+</div>
 
 <?php get_footer(); ?>

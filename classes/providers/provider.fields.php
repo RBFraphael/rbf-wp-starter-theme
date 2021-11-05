@@ -10,6 +10,7 @@ if(!class_exists("RBFWpStarterTheme_ProviderFields")){
             $general = new FieldsBuilder("general-options", ['style' => "seamless"]);
             $general
                 ->addImage("favicon", ['label' => __("Site favicon", "rbf-wp-starter-theme"), 'return_format' => "id"])
+                ->addTrueFalse("enable-barba", ['label' => __("Enable SPA-like website (BarbaJS)", "rbf-wp-starter-theme")])
                 ->addTrueFalse("enable-loader", ['label' => __("Enable site loader", "rbf-wp-starter-theme")])
                 ->addImage("loader-image", ['label' => __("Site loader image", "rbf-wp-starter-theme"), 'return_format' => "url"])
                     ->conditional("enable-loader", "==", "1")
@@ -23,6 +24,8 @@ if(!class_exists("RBFWpStarterTheme_ProviderFields")){
             $header = new FieldsBuilder("header-options", ['style' => "seamless"]);
             $header
                 ->addImage("header-logo", ['label' => __("Header logo", "rbf-wp-starter-theme"), 'return_format' => "url"])
+                ->addImage("mobile-header-logo", ['label' => __("Mobile header logo", "rbf-wp-starter-theme"), 'return_format' => "url"])
+                ->addImage("drawer-logo", ['label' => __("Mobile drawer logo", "rbf-wp-starter-theme"), 'return_format' => "url"])
                 ->setLocation("options_page", "==", "theme-options-header");
             
             $this->add_field_group($header);

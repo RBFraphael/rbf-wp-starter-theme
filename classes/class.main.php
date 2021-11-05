@@ -34,6 +34,7 @@ if(!class_exists("RBFWpStarterTheme_Main")){
             add_action("after_setup_theme", [$actions, "theme_support"]);
             add_action("after_setup_theme", [$actions, "register_menus"]);
             add_action("init", [$actions, "register_cpts"]);
+            add_action("init", [$actions, "register_taxonomies"]);
             add_action("init", [$actions, "register_css"]);
             add_action("init", [$actions, "register_js"]);
             add_action("rest_api_init", [$actions, "register_rest_api"]);

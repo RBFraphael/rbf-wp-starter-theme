@@ -133,8 +133,14 @@ if(!class_exists("RBFWpStarterTheme_Actions")){
 
         public function register_cpts()
         {
-            include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.customposttypes.php";
-            $cpts = new RBFWpStarterTheme_ProviderCustomPostTypes();
+            include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.posttypes.php";
+            $cpts = new RBFWpStarterTheme_ProviderPostTypes();
+        }
+
+        public function register_taxonomies()
+        {
+            include_once RBFWPSTARTERTHEME_PATH."/classes/providers/provider.taxonomies.php";
+            $taxonomies = new RBFWpStarterTheme_ProviderTaxonomies();
         }
 
         public function register_rest_api()

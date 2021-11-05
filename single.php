@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <?php while(have_posts()): the_post(); ?>
-<main>
+<div>
     <div class="w-100 lazy bg-image" data-bg="<?= get_the_post_thumbnail_url(); ?>" style="height:560px;"></div>
     <article class="container-fluid py-5">
         <div class="container">
@@ -19,7 +19,7 @@
             </div>
         </div>
     </article>
-</main>
+</div>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

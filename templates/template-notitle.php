@@ -3,9 +3,9 @@
 <?php get_header(); ?>
 
 <?php while(have_posts()): the_post(); ?>
-<main class="container py-5">
+<div class="container py-5">
     <?php the_content(); ?>
-</main>
+</div>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

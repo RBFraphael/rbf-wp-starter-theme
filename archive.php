@@ -1,7 +1,7 @@
 <?php if(!defined('ABSPATH')){ exit; } ?>
 <?php get_header(); ?>
 
-<main class="container-fluid py-5">
+<div class="container-fluid py-5">
     <div class="row mb-4">
         <div class="col-12">
             <h4><?= __("Archive", "rbf-wp-starter-theme"); ?></h4>
@@ -13,6 +13,6 @@
             <?php get_template_part("partials/post-card"); ?>
         <?php endwhile; ?>
     </div>
-</main>
+</div>
 
 <?php get_footer(); ?>
