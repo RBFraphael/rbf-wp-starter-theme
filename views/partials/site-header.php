@@ -36,5 +36,5 @@
             </div>
         </div>
     </div>
-    <?php get_template_part("partials/breadcrumbs"); ?>
+    <?php get_template_part("views/partials/breadcrumbs"); ?>
 </header>

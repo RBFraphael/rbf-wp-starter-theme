@@ -15,13 +15,13 @@
 
 <?php wp_body_open(); ?>
 
-<?php get_template_part("partials/loader"); ?>
+<?php get_template_part("views/partials/loader"); ?>
 
-<?php get_template_part("partials/popups"); ?>
+<?php get_template_part("views/partials/popups"); ?>
 
-<?php get_template_part("partials/mobile-drawer"); ?>
+<?php get_template_part("views/partials/mobile-drawer"); ?>
 
-<?php get_template_part("partials/site-header"); ?>
+<?php get_template_part("views/partials/site-header"); ?>
 
 <?php if(get_field("enable-barba", "options")): ?>
 <main data-barba="container" data-barba-namespace="rbf-wp-starter-theme">
