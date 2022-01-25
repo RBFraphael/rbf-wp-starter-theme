@@ -1,3 +1,6 @@
+# Project Archived
+If you're interested in this starter theme, check out my new project [here](https://github.com/RBFraphael/wp-starter-theme).
+
 # RBF Wordpress Starter Theme
 An easy to use and easy to understand Wordpress starter theme
 
